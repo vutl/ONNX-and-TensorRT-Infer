@@ -1,9 +1,10 @@
+# export_onnx.py
 from ultralytics import YOLO
 import os
 
 # Config
-PT_MODEL_PATH = "ONNX/yolov8n.pt"
-ONNX_OUTPUT_PATH = "ONNX/yolov8n.onnx"
+PT_MODEL_PATH = "weights/yolov8n.pt"
+ONNX_OUTPUT_PATH = "weights/yolov8n.onnx"
 IMG_SIZE = 640
 OPSET_VERSION = 12
 
@@ -19,7 +20,7 @@ def export_to_onnx():
         imgsz=IMG_SIZE,
         opset=OPSET_VERSION,
         simplify=True,
-        dynamic=False
+        dynamic=True  # quan trọng: cho phép N, H, W động
     )
 
     print(f"[INFO] ONNX model saved: {ONNX_OUTPUT_PATH}")

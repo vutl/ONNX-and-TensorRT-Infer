@@ -14,8 +14,8 @@ from onnxruntime.quantization import (
 # ============================================================
 # Config
 # ============================================================
-FP32_ONNX_PATH = "ONNX/yolov8n.onnx"
-INT8_QDQ_ONNX_PATH = "ONNX/yolov8n_qdq.onnx"
+FP32_ONNX_PATH = "weights/yolov8n.onnx"
+INT8_QDQ_ONNX_PATH = "weights/yolov8n_qdq.onnx"
 
 # Ảnh dùng để calibration (khuyến nghị tăng số lượng)
 CALIB_IMAGE_PATHS = [

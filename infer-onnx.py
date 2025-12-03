@@ -114,7 +114,7 @@ def postprocess(
 
 
 if __name__ == "__main__":
-    model = "ONNX/yolov8n.onnx"
+    model = "weights/yolov8n.onnx"
     img = "person.jpg"
     input_width = 640
     input_height = 640

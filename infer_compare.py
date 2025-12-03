@@ -6,9 +6,10 @@ import numpy as np
 from ultralytics import YOLO
 import onnxruntime as ort
 
-pt_path = '/home/atin/vutl/ONNX/yolov8n.pt'
-onnx_path = '/home/atin/vutl/ONNX/yolov8n.onnx'
-trt_path_u = '/home/atin/vutl/ONNX/yolov8n.engine'             # TensorRT từ .pt
+# Use project-relative `weights/` for model artifacts
+pt_path = 'weights/yolov8n.pt'
+onnx_path = 'weights/yolov8n.onnx'
+trt_path_u = 'weights/yolov8n.engine'             # TensorRT từ .pt
 # trt_path_onnx removed: we no longer build or benchmark ONNX->TensorRT engine
 
 image_paths = [
